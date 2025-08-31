@@ -5,7 +5,7 @@ int main() {
     printf(" square root of the number is :%f", squareroot(25.00));
    
     return 0;
-
+//jay
 
 }
 float squareroot(float n){
