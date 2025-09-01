@@ -29,7 +29,8 @@ int main( )
     int age = 22;
     int *ptr = &age;
     ptr ++; 
-    output will be the address of ptr wil be increasd by 4 bytes as its data type is int .
+    output will be the address of ptr wil be increasd by 4 by
+    tes as its data type is int .
 
     case :2 
     if it has float datatype it will be increased by float bytes.
