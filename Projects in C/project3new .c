@@ -1,7 +1,9 @@
 # include<stdio.h>// calender of the  1 year.
 int main() {
     int i, a;
-    int x=0,r=0;
+    int x=0;
+    int r=0;
+
         for(int i=1;i<=7;i++){
             int a=1;
             r=0;    
@@ -56,29 +58,31 @@ int main() {
         if (i!=2){
         a=29;
         if(r==7){
+              printf("%3d", a);
+        x++;
                     printf("\n");
                     r=0;
                 }
                 r++;
-        printf("%3d", a);
-        x++;
-       
+        
         a=30;
         if(r==7){
+              printf("%3d", a);
+        x++;
                     printf("\n");
                     r=0;
                 }
                 r++;
-        printf("%3d", a);
-        x++;
+       
         if(i%2!=0){
         a=31;
         if(r==7){
+            printf("%3d \n", a);
                     printf("\n");
                     r=0;
                 }
         x++;r++;
-        printf("%3d \n", a);
+     
        
         }
     }
