@@ -1,4 +1,4 @@
-# include<stdio.h>
+# include<stdio.h>// print the name using string function and array.
 void printstring(char arr[]);
 int main() {
 

@@ -1,4 +1,4 @@
-# include<stdio.h>
+# include<stdio.h>// print the tables using function and array.
 
 
 void storetables(int tables[][10], int n, int m, int number);

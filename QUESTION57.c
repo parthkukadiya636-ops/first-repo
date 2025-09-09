@@ -1,4 +1,4 @@
-# include<stdio.h>// printf the fibonacci series using array.
+# include<stdio.h>// printf the fibonacci series using array..
 int main() {
     int n;
     printf("enter n (n>2):");
