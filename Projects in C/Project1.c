@@ -1,7 +1,7 @@
 # include<stdio.h>
 int main() {
     int random= 25;
-    int guess=0;
+    int guess;
     int no_of_guess=0;
     printf("welcome to the world of guessing  number !! \n " );
      
