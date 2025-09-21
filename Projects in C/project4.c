@@ -1,4 +1,4 @@
-# include<stdio.h>
+# include<stdio.h>// making a calender using array and string.
 
 int get_1st_weekday(int year);
 
