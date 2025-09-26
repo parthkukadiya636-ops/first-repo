@@ -1,10 +1,10 @@
-# include<stdio.h>// calender of the  1 year.
+# include<stdio.h>// calender of the elements of the array
 int main() {
     int i, a;
     int x=0,r=0;
         for(int i=1;i<=7;i++){
             int a=1;
-            r=0;    
+            r=0;
             if(i==1){
                 printf("january \n");
                 printf("  M  T  W  T  F  S  S\n");
