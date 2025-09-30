@@ -16,5 +16,11 @@ strcpy(s1.name, "parth");
 printf("the name of the student is :%s\n", s1.name);
 printf("the cgpa of the student is : %f\n", s1.cgpa);
 printf("the roll no of the student is: %d", s1.roll);
+
+
+
+
+
+
 return 0;
 }
