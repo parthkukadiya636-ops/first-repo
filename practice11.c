@@ -1,6 +1,10 @@
 #include <stdio.h>
 
 // Struct definition here
+struct stu{
+    int id;
+    char name;
+};
 
 int main() {
     FILE *ptr;
@@ -10,7 +14,7 @@ int main() {
         printf("Error opening file!\n");
         return 1; // Exit if file can't be opened
     }
-
+struct stu comp[99];
     // Array definition and printf
     // Loop to read and write data
     
