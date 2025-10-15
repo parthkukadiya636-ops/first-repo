@@ -1,76 +1,78 @@
-# include<stdio.h>
+ // user management sysyem.
+# include<stdio.h>  // user management sysyem.
+# include<string.h>
 
-# define max_user 10
-
-typedef struct{
-        char username[30];
-        char password[30];
-}user;
-
-user users[max_user];
-void register_user();
+typedef struct user_account{
+    char holder_name[30];
+    char password[30];
+}acc;
+acc accounts[10];
+int count_user=0;
+void  registration();
 int login_user();
-int user_count = 0;
-
 
 int main(){
 int choices;
-int user_index;
+int user_no;
+
 while(1){
-    printf("welcome to user management sysytem");
-    printf("\n 1. register");
-    printf("\n 2. login");
-    printf("\n 3. exit");
+    printf("\n--------Welcome to user management system!!!--------\n");
+    printf("1.register\n");
+    printf("2.login\n");
+    printf("3.exit\n");
+    
 
-    printf("\nselect any of the choices from above: ");
-    scanf("%d",&choices);
-
-
-
-switch(choices){
-    case 1:
-    register_user();
+    printf("enter the choices above given.");
+    scanf("%d", &choices);
+    getchar();
+    
+    switch(choices){
+    case 1:printf("you have choose registration\n");
+    registration();
+    
     break;
-    case 2:
-
-    user_index = login_user();
-
-    if(user_index>=0){
-        printf("login successful!!.welcome %s", users[user_index].username);
+    case 2:printf("you have choose login\n");
+    if(login_user()==-1){
+        printf("\nlogin failed!! incorrect username or password.\n");
     }
-
-    else{
-        printf("login failed!! .incorrect username or password.");
-    }
+    
     break;
     case 3:
-    printf("exiting programe");
-    return 0;
-
+    printf("exiting the system!!\n");
+     return 0;
     break;
-    default:
+    }
 
-    printf("\ninvalid option. please try again!!!\n");
-    break;
-}
-}
+    }
 return 0;
 }
-void register_user(){
+void  registration(){
 
-    if(user_count == max_user){
-        printf("no more registration are allowed !!");
-    }
-    int new_index = user_count;
-
-    printf("\nRegister a new user\n");
-    printf("enter username:");
-    fgets(users[new_index].username, 30,stdin);
-
-
-
+    printf("enter account holder name:\n");
+        
+    fgets(accounts[count_user].holder_name,30,stdin);
+    printf("enter the password:\n");
+    fgets(accounts[count_user].password,30,stdin);
+    printf("\nregistered successfully!!\n");
+    count_user++;
 }
-
 int login_user(){
-    return -1;
+    char username[30];
+    char password[30];
+     int x = count_user;
+    
+    printf("enter account holder name:\n");
+    fgets(username,30,stdin);
+    printf("enter the password:\n");
+    fgets(password,30,stdin);
+for(int i=0; i<=x;i++){
+
+    if(strcmp(username,accounts[i].holder_name)==0 && strcmp(password,accounts[i].password)==0){
+        printf("\nlogin successful!! Welcome %s\n",accounts[i].holder_name);
+        return 0;
+        
+    }
+    }
+
+return -1;
 }
