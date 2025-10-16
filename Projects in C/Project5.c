@@ -47,7 +47,6 @@ while(1){
 return 0;
 }
 void  registration(){
-
     printf("enter account holder name:\n");
         
     fgets(accounts[count_user].holder_name,30,stdin);
