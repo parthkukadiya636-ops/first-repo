@@ -8,7 +8,7 @@ typedef struct user_account{
 }acc;
 acc accounts[10];
 int count_user=0;
-void  registration();
+void registration();
 int login_user();
 
 int main(){
