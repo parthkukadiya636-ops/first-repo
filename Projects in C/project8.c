@@ -73,15 +73,18 @@ void deposit_money(){
     printf("Enter the account number:");
     scanf("%d", &acc_no);
     printf("Enter the deposit amount:");
-    scanf("%d", &money);
+    scanf("%f", &money);
 
     while(fread(&acc_r, sizeof(acc_r),1, file)){
-        if(acc_read.acc_no == acc_no){
+        if(acc_r. account_no == acc_no){
             acc_r.balance += money;
-        }
+          
+            printf("you have sucesfully deposited %.2f Rs in your account",money);
+            fclose(file);
+            return;
     }
-
-
+}
+fclose(file);
 
 
 }
